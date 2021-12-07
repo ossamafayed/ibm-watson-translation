@@ -1,0 +1,4 @@
+applications:
+  - name: RKST1
+    host: RKST1
+    memory: 512M

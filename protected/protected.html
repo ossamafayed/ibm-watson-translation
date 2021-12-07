@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DKST App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/semantic.css">
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="/css/icofont.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <title></title>
+    <link rel="ICON" href="/img/0001.png" type="image/ico" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="ui secondary pointing menu nav">
+            <a class="item nav-logo">
+                <img src="/img/0001.png" width="30%" />
+            </a>
+            <div class="center menu">
+                <a class="item active" href="/">
+                    Home
+                </a>
+                <a class="item" href="https://rkst-un1.au-syd.cf.appdomain.cloud/">
+                    Services
+                </a>
+                <a class="item" href="/logout">
+                    Logout
+                </a>
+            </div>
+        </div>
+
+        <div class="ui segment main-container">
+            <div class="container pt-100">
+                <div class="ui two column centered grid">
+                    <div class="column mb-30">
+                        <h1 class="text-center">RKST Translation</h1>
+                    </div>
+                </div>
+                <div class="ui equal width grid">
+                    <div class="equal width row bordered-container">
+                        <div class="column  p-23">
+                            <div class="ui form">
+                                <div class="field mb-0">
+                                    <label>Language</label>
+                                    <select class="ui search dropdown w-70" id="source"
+                                        data-bind="options : languages , optionsText: 'nativeName', optionsValue: 'code' , value: sourceLang,  optionsCaption: 'Choose Language'">
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <textarea data-bind="value: sourceText , event:{ change: traslateText}"></textarea>
+                                </div>
+                                <button class="ui right labeled icon button" data-bind="click: saveTranslation">
+                                    <i class="save icon"></i>
+                                    Save translation
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="column p-23">
+                            <div class="ui form">
+                                <div class="field mb-0">
+                                    <label>Country</label>
+                                    <select class="ui search dropdown w-70" id="target"
+                                        data-bind="options : languages , optionsText: 'nativeName', optionsValue: 'code' , value: tragetLang,  optionsCaption: 'Choose Language'">
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <textarea data-bind="value: translatedText"></textarea>
+                                    <div class="inverted  abs-90">
+                                        <button data-bind="click: copyToClip"
+                                            class="ui inverted black button no-border">
+                                            <i class="copy outline icon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <span>character count: </span>
+                                <span data-bind="text: chartCount"></span>
+                                <br>
+                                <span>word count: </span>
+                                <span data-bind="text: wordCount"></span>
+                            </div>
+
+                        </div>
+                        <div class="inverted  abs-50">
+                            <button data-bind="click: swpaLang" class="ui inverted black button no-border"><i
+                                    class="exchange alternate icon"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="ui segment main-container">
+            <h3 class="ui block header">
+                My Translations History
+            </h3>
+            <table class="ui padded table">
+                <thead>
+                    <tr>
+                        <th>From</th>
+                        <th>Text</th>
+                        <th>to</th>
+                        <th>Translated Text</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach:{ data : transaltionHistoryArray , as :'history' }">
+                    <tr>
+                        <td data-bind="text: history.sourceLang"></td>
+                        <td data-bind="text: history.sourceText"></td>
+                        <td data-bind="text: history.targetLanguage"></td>
+                        <td data-bind="text: history.translatedText"></td>
+                        <td data-bind="text: history.dateTime"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/semantic.js"></script>
+    <script src="/js/knockout-3.5.1.js"></script>
+    <script src="jquery.json-viewer.js"></script>
+    <script src="trasnlate.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'icons';
+    font-style: normal;
+    font-weight: normal;
+    src: local('icons'),
+      url('../fonts/icons.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'icons';
+    font-style: normal;
+    font-weight: normal;
+    src: local('icons'),
+      url('../fonts/icons.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'icons';
+    font-style: normal;
+    font-weight: normal;
+    src: local('icons'),
+      url('../fonts/icons.eot') format('eot');
+  }
+  @font-face {
+    font-family: 'icons';
+    font-style: normal;
+    font-weight: normal;
+    src: local('icons'),
+      url('../fonts/icons.svg') format('svg');
+  }
+  /*outlined*/
+  @font-face {
+    font-family: 'outline-icons';
+    font-style: normal;
+    font-weight: normal;
+    src: local('outline-icons'),
+      url('../fonts/outline-icons.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'outline-icons';
+    font-style: normal;
+    font-weight: normal;
+    src: local('outline-icons'),
+      url('../fonts/outline-icons.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'outline-icons';
+    font-style: normal;
+    font-weight: normal;
+    src: local('outline-icons'),
+      url('../fonts/outline-icons.eot') format('eot');
+  }
+  @font-face {
+    font-family: 'outline-icons';
+    font-style: normal;
+    font-weight: normal;
+    src: local('outline-icons'),
+      url('../fonts/outline-icons.svg') format('svg');
+  }
+  body{
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+  }
+.nav{
+    background-color: #fff !important;
+    border-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-logo{
+    padding: 6px 16px;
+}
+.item{
+    align-self: center !important;
+    color: #ccc !important;
+}
+.item.active{
+    color: #63c9c6 !important;
+    border-bottom: 0 !important;
+}
+
+
+.main-btn{
+    background-color: #63c9c6;
+    border: 0;
+    color: #fff;
+}
+.sec-btn{
+    background-color: #fff;
+    border: 0;
+    color: #000;
+}
+.extralg-btn{
+    width: inherit;
+}
+.btn:hover {
+    opacity: 0.7;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding: 0px 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .main-container{
+      background-color: #000 !important;
+      color: #fff;
+      margin-top: 0px !important;
+      border-radius: 0 !important;
+      height: calc(100% - 50px);
+      padding: 0px 25px !important;
+  }
+  /*padding*/
+  .pt-20{
+      padding-top: 20px;
+  }
+  .pt-30{
+    padding-top: 30px !important;
+  }
+
+  .pt-100{
+    padding-top: 100px !important;
+  }
+  .p-23{
+      padding: 20px 30px !important;
+  }
+  /*padding*/
+  /*margins*/
+  .mb-0{
+      margin-bottom: 0 !important;
+  }
+  .mb-10{
+      margin-bottom: 10px;
+  }
+  .mb-20{
+    margin-bottom: 20px !important;
+    }
+  .mb-30{
+    margin-bottom: 30px;
+  }
+  .mt-30{
+    margin-top: 30px !important;
+  }
+  /*endOfMargins*/
+  /*borders*/
+  button.ui.inverted.black.button.no-border{
+      border: 0 !important;
+      box-shadow: none !important
+  }
+  /*borders*/
+  /*textalignment*/
+  .text-center{
+    text-align: center;
+  }
+  .bordered-container{
+      border:1px solid #fff;
+      border-radius: 8px;
+      position: relative;
+  }
+  .w-70{
+      width: 70% !important;
+  }
+  .ui.form select{
+    border-bottom: 1px solid;
+    border-radius: 0;
+  }
+  
+  .ui.form select, textarea{
+      background-color: #262626 !important;
+      color: #fff !important;
+  }
+  .abs-50 {
+    position: absolute;
+    left: 48%;
+    top: 16%;
+  }
+  .abs-90 {
+    position: absolute;
+    left: 90%;
+    top: 30%;
+  }
+ 
+  .ui.inverted.segment, .ui.primary.inverted.segment{
+      background-color: transparent !important;
+  }
+  .ui.content.container {
+    height: 300px !important;
+    width: 500px ;
+}
